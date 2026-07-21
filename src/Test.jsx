@@ -3,6 +3,8 @@ import demoData from './data.json'
 import {Routes,Route} from "react-router-dom";
 import Navbar from "./comp/Navbar";
 function Test({time}) {
+  const paragraphs = Object.values(demoData);
+  const demo = paragraphs[Math.floor(Math.random() * paragraphs.length)];
   const textRef = useRef("");
   const [demo, setDemo] = useState(demo1);
   const [text, setText] = useState("");
